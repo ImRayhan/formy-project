@@ -1,5 +1,6 @@
 package com.qa.formy.Factory;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -12,10 +13,13 @@ import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.qa.formy.constants.AppConstant;
@@ -52,7 +56,7 @@ public class DriverFactory {
 
 			else {
 
-				driver = new ChromeDriver(optionMnager.getChromeOption());
+				tlDriver.set(new ChromeDriver(optionMnager.getChromeOption()));
 				log.info("Browser is: " + browserName);
 			}
 			break;
@@ -82,12 +86,12 @@ public class DriverFactory {
 			break;
 		}
 
-		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(AppConstant.MEDIUM_DEFULT_WAIT));
-		driver.get(prop.getProperty("url"));
+		getDriver().manage().deleteAllCookies();
+		getDriver().manage().window().maximize();
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(AppConstant.MEDIUM_DEFULT_WAIT));
+		getDriver().get(prop.getProperty("url"));
 
-		return driver;
+		return getDriver();
 
 	}
 
@@ -181,5 +185,33 @@ public class DriverFactory {
 			e.printStackTrace();
 		}
 	}
+
+	/**
+	 * take screenshot
+	 */
+	public static String getScreenshot(String methodName) {
+	    // Define the directory path for storing screenshots
+	    String screenshotDir = System.getProperty("user.dir") + "/screenshot/";
+	    File dir = new File(screenshotDir);
+
+	    // Create the directory if it doesn't exist
+	    if (!dir.exists()) {
+	        dir.mkdirs();
+	    }
+
+	    // Capture the screenshot and save it to the specified path
+	    String path = screenshotDir + methodName + "_" + System.currentTimeMillis() + ".png";
+	    File srcFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+	    File destination = new File(path);
+
+	    try {
+	        FileHandler.copy(srcFile, destination);
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+
+	    return path;
+	}
+
 
 }

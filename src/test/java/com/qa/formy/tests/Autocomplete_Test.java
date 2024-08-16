@@ -2,7 +2,7 @@ package com.qa.formy.tests;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.AssertJUnit;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -18,7 +18,7 @@ public class Autocomplete_Test extends BaseTest {
 	public void verifyTitle() {
 
 		String actualTitle = autocompletePage.autocompletePageTitle();
-		AssertJUnit.assertEquals(actualTitle, AppConstant.TITLE_AUTOCOMPLETE_FORM);
+		Assert.assertEquals(actualTitle, AppConstant.TITLE_AUTOCOMPLETE_FORM);
 		log.info("Actual titls Autocomplete Form page: " + actualTitle);
 
 	}
@@ -35,13 +35,13 @@ public class Autocomplete_Test extends BaseTest {
 	@Test(priority = 2, dependsOnMethods = "verifyTitle")
 	public void veryfyInputFieldEnbled() {
 
-		AssertJUnit.assertTrue(autocompletePage.adressFieldEnbled());
-		AssertJUnit.assertTrue(autocompletePage.streetAdressFieldEnbled());
-		AssertJUnit.assertTrue(autocompletePage.streetAdress2FieldEnbled());
-		AssertJUnit.assertTrue(autocompletePage.cityFieldEnbled());
-		AssertJUnit.assertTrue(autocompletePage.stateFieldEnbled());
-		AssertJUnit.assertTrue(autocompletePage.zipcodeFieldEnbled());
-		AssertJUnit.assertTrue(autocompletePage.contryFieldEnbled());
+		Assert.assertTrue(autocompletePage.adressFieldEnbled());
+		Assert.assertTrue(autocompletePage.streetAdressFieldEnbled());
+		Assert.assertTrue(autocompletePage.streetAdress2FieldEnbled());
+		Assert.assertTrue(autocompletePage.cityFieldEnbled());
+		Assert.assertTrue(autocompletePage.stateFieldEnbled());
+		Assert.assertTrue(autocompletePage.zipcodeFieldEnbled());
+		Assert.assertTrue(autocompletePage.contryFieldEnbled());
 		softAssert.assertAll();
 
 	}

@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.testng.AssertJUnit;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.qa.formy.base.BaseTest;
+
 
 public class Button_Test extends BaseTest {
 
@@ -21,7 +22,7 @@ public class Button_Test extends BaseTest {
 						"2", "Dropdown", "Dropdown link 1", "Dropdown link 2"));
 
 		List<String> actualtextBtn = buttonPage.allTheButtonFIeldText();
-		AssertJUnit.assertEquals(expectedlistTextBtn, actualtextBtn);
+		Assert.assertEquals(expectedlistTextBtn, actualtextBtn);
 
 	}
 
