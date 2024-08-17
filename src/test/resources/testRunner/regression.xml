@@ -16,8 +16,8 @@
 	</test>
 
 	<test name="Button Page">
-			<parameter name="browser" value="chrome" />
-					<parameter name="browserversion" value="111" />
+			<parameter name="browser" value="firefox" />
+					<parameter name="browserversion" value="116" />
 		<classes>
 			<class name="com.qa.formy.tests.Button_Test" />
 		</classes>
