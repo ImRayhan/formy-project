@@ -1,5 +1,7 @@
 package com.qa.formy.Factory;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
@@ -34,8 +36,19 @@ public class OptionMnager {
 		if (Boolean.parseBoolean(prop.getProperty("incognito").trim())) {
 			co.addArguments("--incognito");
 			log.info("Chrome browser run in incognito mood");
-
 		}
+
+		if (Boolean.parseBoolean(prop.getProperty("remote").trim())) {
+			co.setCapability("browserName", "chrome");
+			co.setBrowserVersion(prop.getProperty("browserversion"));
+
+			Map<String, Object> selenoidOptions = new HashMap<>();
+			selenoidOptions.put("screenResolution", "1280x1024x24");
+			selenoidOptions.put("enableVNC", true);
+			// selenoidOptions.put("name", prop.getProperty("testname"));
+			co.setCapability("selenoid:options", selenoidOptions);
+		}
+
 		return co;
 
 	}
@@ -53,6 +66,17 @@ public class OptionMnager {
 			fo.addArguments("--incognito");
 			log.info("Firefox browser run in incognito mood");
 
+		}
+
+		if (Boolean.parseBoolean(prop.getProperty("remote").trim())) {
+			fo.setCapability("browserName", "firefox");
+			fo.setBrowserVersion(prop.getProperty("browserversion"));
+
+			Map<String, Object> selenoidOptions = new HashMap<>();
+			selenoidOptions.put("screenResolution", "1280x1024x24");
+			selenoidOptions.put("enableVNC", true);
+			// selenoidOptions.put("name", prop.getProperty("testname"));
+			fo.setCapability("selenoid:options", selenoidOptions);
 		}
 		return fo;
 
@@ -72,6 +96,17 @@ public class OptionMnager {
 			log.info("Edge browser run in incognito mood");
 
 		}
+		if (Boolean.parseBoolean(prop.getProperty("remote").trim())) {
+			eo.setCapability("browserName", "edge");
+			eo.setBrowserVersion(prop.getProperty("browserversion"));
+
+			Map<String, Object> selenoidOptions = new HashMap<>();
+			selenoidOptions.put("screenResolution", "1280x1024x24");
+			selenoidOptions.put("enableVNC", true);
+			// selenoidOptions.put("name", prop.getProperty("testname"));
+			eo.setCapability("selenoid:options", selenoidOptions);
+		}
+
 		return eo;
 
 	}

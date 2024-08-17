@@ -1,52 +1,48 @@
-2024-08-15 23:14:33 DEBUG TestNG:82 - suiteXmlPath: "/Users/rayhanchowdhury/eclipse-workspace/formy-project/src/test/resources/testRunner/regression.xml"
-2024-08-15 23:14:33 INFO  Utils:112 - [TestNG] Running:
-  /Users/rayhanchowdhury/eclipse-workspace/formy-project/src/test/resources/testRunner/regression.xml
-
-2024-08-15 23:14:33 INFO  DriverFactory:108 - Running on qa env
-2024-08-15 23:14:33 INFO  DriverFactory:108 - Running on qa env
-2024-08-15 23:14:33 INFO  DriverFactory:109 - java.io.FileInputStream@7319bc72
-2024-08-15 23:14:33 INFO  DriverFactory:109 - java.io.FileInputStream@71233e0d
-2024-08-15 23:14:33 INFO  DriverFactory:45 - browser name input in properties file: chrome
-2024-08-15 23:14:33 INFO  DriverFactory:45 - browser name input in properties file: chrome
-2024-08-15 23:14:35 INFO  DriverFactory:60 - Browser is: chrome
-2024-08-15 23:14:35 INFO  DriverFactory:60 - Browser is: chrome
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.linkText: Buttons
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.xpath: //a[text()='Autocomplete' and @class='btn btn-lg']
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.xpath: //form/div//button
-2024-08-15 23:14:36 INFO  ElementUtils:22 - Actual titls Autocomplete Form page: Formy
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.xpath: //input[@id='autocomplete']
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: street_number
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: route
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: route
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: route
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: route
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: route
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.xpath: //div[@class='dropdown-menu show']/a
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.xpath: //input[@id='autocomplete']
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.xpath: //input[@id='autocomplete']
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: street_number
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: street_number
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: route
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: route
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: locality
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: locality
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: administrative_area_level_1
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: administrative_area_level_1
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: postal_code
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: postal_code
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: country
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: country
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.xpath: //input[@id='autocomplete']
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.xpath: //input[@id='autocomplete']
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: street_number
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: street_number
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: route
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: route
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: locality
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: locality
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: administrative_area_level_1
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: administrative_area_level_1
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: postal_code
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: postal_code
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: country
-2024-08-15 23:14:36 INFO  ElementUtils:28 - locator : By.id: country
+2024-08-17 01:42:46 INFO  DriverFactory:105 - Running on qa env
+2024-08-17 01:42:46 INFO  DriverFactory:105 - Running on qa env
+2024-08-17 01:42:46 INFO  DriverFactory:106 - java.io.FileInputStream@4d8721b4
+2024-08-17 01:42:46 INFO  DriverFactory:106 - java.io.FileInputStream@78445462
+2024-08-17 01:42:46 INFO  DriverFactory:42 - browser name input in properties file: chrome
+2024-08-17 01:42:46 INFO  DriverFactory:42 - browser name input in properties file: chrome
+2024-08-17 01:42:47 INFO  DriverFactory:57 - Browser run local  name: chrome
+2024-08-17 01:42:47 INFO  DriverFactory:57 - Browser run local  name: chrome
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.linkText: Buttons
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.xpath: //a[text()='Autocomplete' and @class='btn btn-lg']
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.xpath: //form/div//button
+2024-08-17 01:42:48 INFO  ElementUtils:22 - Actual titls Autocomplete Form page: Formy
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.xpath: //input[@id='autocomplete']
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: street_number
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: route
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: route
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: route
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: route
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: route
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.xpath: //input[@id='autocomplete']
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.xpath: //div[@class='dropdown-menu show']/a
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.xpath: //input[@id='autocomplete']
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: street_number
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: street_number
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: route
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: route
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: locality
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: locality
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: administrative_area_level_1
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: administrative_area_level_1
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: postal_code
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: postal_code
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: country
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.id: country
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.xpath: //input[@id='autocomplete']
+2024-08-17 01:42:48 INFO  ElementUtils:28 - locator : By.xpath: //input[@id='autocomplete']
+2024-08-17 01:42:49 INFO  ElementUtils:28 - locator : By.id: street_number
+2024-08-17 01:42:49 INFO  ElementUtils:28 - locator : By.id: street_number
+2024-08-17 01:42:49 INFO  ElementUtils:28 - locator : By.id: route
+2024-08-17 01:42:49 INFO  ElementUtils:28 - locator : By.id: route
+2024-08-17 01:42:49 INFO  ElementUtils:28 - locator : By.id: locality
+2024-08-17 01:42:49 INFO  ElementUtils:28 - locator : By.id: locality
+2024-08-17 01:42:49 INFO  ElementUtils:28 - locator : By.id: administrative_area_level_1
+2024-08-17 01:42:49 INFO  ElementUtils:28 - locator : By.id: administrative_area_level_1
+2024-08-17 01:42:49 INFO  ElementUtils:28 - locator : By.id: postal_code
+2024-08-17 01:42:49 INFO  ElementUtils:28 - locator : By.id: postal_code
+2024-08-17 01:42:49 INFO  ElementUtils:28 - locator : By.id: country
+2024-08-17 01:42:49 INFO  ElementUtils:28 - locator : By.id: country

@@ -32,10 +32,7 @@ public class DriverFactory {
 	OptionMnager optionMnager;
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
 
-	public static WebDriver getDriver() {
-		return tlDriver.get();
 
-	}
 
 	public static final Logger log = LogManager.getLogger(DriverFactory.class);
 
@@ -57,7 +54,7 @@ public class DriverFactory {
 			else {
 
 				tlDriver.set(new ChromeDriver(optionMnager.getChromeOption()));
-				log.info("Browser is: " + browserName);
+				log.info("Browser run local  name: " + browserName);
 			}
 			break;
 
@@ -66,7 +63,7 @@ public class DriverFactory {
 				initRemoteDriver(browserName);
 				log.info("Running in remote");
 			} else {
-				driver = new FirefoxDriver(optionMnager.getFirefoxOption());
+				tlDriver.set(new FirefoxDriver(optionMnager.getFirefoxOption()));
 				log.info("Browser is: " + browserName);
 			}
 			break;
@@ -76,7 +73,7 @@ public class DriverFactory {
 				initRemoteDriver(browserName);
 				log.info("Running in remote");
 			} else {
-				driver = new EdgeDriver(optionMnager.getedgeOption());
+				tlDriver.set(new EdgeDriver(optionMnager.getedgeOption()));
 				log.info("Browser is: " + browserName);
 			}
 			break;
@@ -114,7 +111,7 @@ public class DriverFactory {
 				switch (envName.toLowerCase().trim()) {
 				case "qa":
 					ip = new FileInputStream("src/test/resources/config/config.qa.properties");
-
+					log.info("Running on qa env from properties");
 					break;
 				case "dev":
 					ip = new FileInputStream("src/test/resources/config/config.dev.properties");
@@ -162,8 +159,8 @@ public class DriverFactory {
 
 			switch (browserName.toLowerCase().trim()) {
 			case "chrome":
-				log.info("Setting up Chrome driver...");
-				tlDriver.set(new RemoteWebDriver(hubUrl, optionMnager.getChromeOption()));
+				log.info("Setting up Chrome driver in remote...");
+				tlDriver.set(new RemoteWebDriver(hubUrl,optionMnager.getChromeOption()));
 				break;
 
 			case "firefox":
@@ -185,33 +182,37 @@ public class DriverFactory {
 			e.printStackTrace();
 		}
 	}
+	
+	public static WebDriver getDriver() {
+		return tlDriver.get();
+
+	}
 
 	/**
 	 * take screenshot
 	 */
 	public static String getScreenshot(String methodName) {
-	    // Define the directory path for storing screenshots
-	    String screenshotDir = System.getProperty("user.dir") + "/screenshot/";
-	    File dir = new File(screenshotDir);
+		// Define the directory path for storing screenshots
+		String screenshotDir = System.getProperty("user.dir") + "/screenshot/";
+		File dir = new File(screenshotDir);
 
-	    // Create the directory if it doesn't exist
-	    if (!dir.exists()) {
-	        dir.mkdirs();
-	    }
+		// Create the directory if it doesn't exist
+		if (!dir.exists()) {
+			dir.mkdirs();
+		}
 
-	    // Capture the screenshot and save it to the specified path
-	    String path = screenshotDir + methodName + "_" + System.currentTimeMillis() + ".png";
-	    File srcFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
-	    File destination = new File(path);
+		// Capture the screenshot and save it to the specified path
+		String path = screenshotDir + methodName + "_" + System.currentTimeMillis() + ".png";
+		File srcFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+		File destination = new File(path);
 
-	    try {
-	        FileHandler.copy(srcFile, destination);
-	    } catch (IOException e) {
-	        e.printStackTrace();
-	    }
+		try {
+			FileHandler.copy(srcFile, destination);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-	    return path;
+		return path;
 	}
-
 
 }
