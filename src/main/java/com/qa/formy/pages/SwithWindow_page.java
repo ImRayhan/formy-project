@@ -70,7 +70,7 @@ public class SwithWindow_page {
 		return elementUtils.getAlertText(5);
 
 	}
-	////
+	
 	
 
 }
