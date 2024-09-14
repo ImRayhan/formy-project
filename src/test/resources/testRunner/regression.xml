@@ -5,41 +5,39 @@
 	<listeners>
 		<listener class-name="com.qa.opencart.listeners.ExtentReportListener" />
 	</listeners>
-	
+
 	<test name="swith window">
 		<parameter name="browser" value="chrome" />
-				<parameter name="browserversion" value="111" />
+		<parameter name="browserversion" value="111" />
 		<classes>
 			<class name="com.qa.formy.tests.SwithWindow_test" />
 		</classes>
-	</test> 
-	<!-- 
+	</test>
+
 	<test name="dropdown Page">
 		<parameter name="browser" value="chrome" />
-				<parameter name="browserversion" value="111" />
+		<parameter name="browserversion" value="111" />
 		<classes>
 			<class name="com.qa.formy.tests.Dropdown_Test" />
 		</classes>
-	</test> -->
+	</test>
 
-<!-- 	<test name="Autocomplete Page">
+	<test name="Autocomplete Page">
 		<parameter name="browser" value="chrome" />
-				<parameter name="browserversion" value="111" />
+		<parameter name="browserversion" value="111" />
 		<classes>
 			<class name="com.qa.formy.tests.Autocomplete_Test" />
 		</classes>
-	</test> -->
+	</test>
 
 
-<!-- 	<test name="Button Page">
-			<parameter name="browser" value="firefox" />
-					<parameter name="browserversion" value="116" />
+	<test name="Button Page">
+		<parameter name="browser" value="firefox" />
+		<parameter name="browserversion" value="116" />
 		<classes>
 			<class name="com.qa.formy.tests.Button_Test" />
 		</classes>
 	</test>
-	
-	-->
 
-</suite> <!--
-Suite -->
+
+</suite> 

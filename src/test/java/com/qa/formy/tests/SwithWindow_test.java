@@ -27,7 +27,7 @@ public class SwithWindow_test extends BaseTest {
 		swithWindow_page.navigatetoSwithWindow();
 		swithWindow_page.clickOnAlert();
 
-		String expectedAlertText = swithWindow_page.name();
+		String expectedAlertText = swithWindow_page.getalertText();
 		String actualAlertText = "This is a test alert!";
 		assertEquals(expectedAlertText, actualAlertText);
 

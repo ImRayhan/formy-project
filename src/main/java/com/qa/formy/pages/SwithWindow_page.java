@@ -65,7 +65,7 @@ public class SwithWindow_page {
 
 	}
 
-	public String name() {
+	public String getalertText() {
 
 		return elementUtils.getAlertText(5);
 
